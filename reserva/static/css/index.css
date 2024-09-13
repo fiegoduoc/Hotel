@@ -1,0 +1,328 @@
+/* Fonts */
+
+.italiana-regular {
+    font-family: "Italiana", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.antic-didone-regular {
+    font-family: "Antic Didone", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.lato-regular {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+.montserrat{
+                 font-family: "Montserrat", sans-serif;
+                 font-optical-sizing: auto;
+                 font-style: normal;
+             }
+
+body, html {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    font-family: "Montserrat", sans-serif;
+}
+
+/* Imagen de la Hero Page*/
+.hero{
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../img/hero.jpeg');
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.hero-text{
+    text-align: center;
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+
+h1, h2{
+    font-size: 65pt;
+    font-family: "Italiana", sans-serif;
+}
+
+p{
+    font-size: 12pt;
+    font-family: "Montserrat", sans-serif;
+}
+
+.logo{
+    position: absolute;
+    z-index: 4;
+    top: 6%;
+    left: 6%;
+}
+
+#navegacion{
+    background-color: transparent;
+    position: absolute;
+    z-index: 5;
+    top: 14%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+a {
+    color: white;
+}
+
+.translate{
+    position: absolute;
+    z-index: 6;
+    top: 2%;
+    right: 5%;
+}
+
+.sesion{
+    position: absolute;
+    z-index: 4;
+    top: 8%;
+    right: 5%;
+}
+
+.face{
+    position: absolute;
+    z-index: 4;
+    top: 20%;
+    right: 5%;
+}
+
+.insta{
+    position: absolute;
+    z-index: 4;
+    top: 50%;
+    right: 5%;
+}
+
+.x{
+    position: absolute;
+    z-index: 4;
+    top: 90%;
+    right: 5%;
+}
+
+.suscripcion{
+    padding: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+h2{
+    font-size: 40pt;
+    font-family: "Antic Didone", serif;
+}
+
+
+.habitaciones{
+    background-image: url('../img/habitaciones.jpeg');
+    height: 80%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    justify-content: start;
+    align-items: end;
+    padding-left: 70px;
+
+}
+
+#room{
+    text-align: center;
+}
+
+#rooms{
+    text-align: center;
+}
+
+.habitacion{
+    width: 37%;
+    padding-top: 55px;
+    background-color: #fffff0;
+    height: 50%;
+    margin-bottom: 150px;
+    border-radius: 4px;
+}
+
+.buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    font-family: "Montserrat", sans-serif;
+}
+
+li{
+    font-size: 15pt;
+    font-family: "Montserrat", sans-serif;
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    font-family: "Montserrat", sans-serif;
+}
+
+#info{
+    text-align: center;
+}
+
+.info{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 50px;
+
+}
+
+.informacion{
+    line-height: 3.0;
+}
+
+#politics{
+    line-height: 1;
+}
+
+
+.comments{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    padding: 30px;
+}
+
+
+:root {
+    --space-cadet: #1f2041;
+    --sunglow: #ffc857;
+    --dark-cyan: #119da4;
+    --paynes-gray: #19647e;
+    --light-color: #fff;
+    --muted-color: slategray;
+    --dot-color: #ccc;
+}
+
+
+button {
+    cursor: pointer;
+    border: none;
+}
+
+.testimonial-slider {
+    width: 60%;
+    background-color: var(--light-color);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+    position: relative;
+    overflow: hidden;
+}
+
+.testimonial-list {
+    display: flex;
+    overflow: hidden;
+}
+
+.testimonial {
+    flex: 1 0 100%;
+    text-align: left;
+    padding: 30px;
+    transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.testimonial .bi-quote {
+    font-size: 4rem;
+    color: black;
+    opacity: 0;
+}
+
+.testimonial blockquote {
+    font-size: 10pt;
+    margin-inline: 20px;
+}
+
+.user-info {
+    margin-top: 20px;
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    gap: 10px;
+}
+
+.user-info img {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+}
+
+.user-details {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    text-align: left;
+    padding-left: 20px;
+}
+
+.user-details .name {
+    font-size: 1.15rem;
+    font-weight: 800;
+    color: black;
+}
+
+
+/* dot navigation */
+
+.dots-container {
+    text-align: center;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    border-radius: 5px;
+    margin-inline: 5px;
+    background-color: var(--dot-color);
+    transition: width 0.5s;
+}
+
+.dot.active {
+    width: 30px;
+    background-color: var(--paynes-gray);
+}
+
+.galeria{
+    background-color: white;
+}
+
+.nav{
+    background-color: transparent;
+    position: absolute;
+    z-index: 5;
+    top: 13%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

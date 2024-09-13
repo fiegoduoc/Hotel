@@ -1,0 +1,345 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/92c054d238.js" crossorigin="anonymous"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Italiana&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Antic+Didone&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="icon" type="image/x-icon" href="{% static 'img/logoDorado.svg' %}">
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    <title>Hotel Pacific Reef</title>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <div class="translate">
+        <span><img src="{% static 'img/uk.svg' %}" alt="UK flag" width="20"><a href="#" style="font-size: 9pt"> Welcome</a></span>
+        <span><img src="{% static 'img/spain.svg' %}" alt="UK flag" width="20"><a href="#" style="font-size: 9pt"> Bienvenido</a></span>
+    </div>
+    
+    <div class="container-fluid">
+                    <ul class="nav justify-content-center">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" style="color: white" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" style="color: white" href="#">Habitaciones</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" style="color: white" href="#">Servicios</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" style="color: white" href="#">Galería</a>
+                        </li>
+                    </ul>
+    </div>
+    
+    <div class="sesion">
+        <button type="button" class="btn btn btn-outline-light">Iniciar Sesión</button>
+    </div>
+
+    <!-- Hero -->
+    <div class="hero">
+        <div class="hero-text">
+            <h1>VIVE EL MOMENTO</h1>
+            <p>Pacific Reef Hotel hace que cada estancia sea insuperable, siempre<br>creciendo, pero manteniendo la comodidad y familiaridad</p>
+            <button type="button" class="btn bg-warning btn-lg" style="color: #2f2f2f">Reservas</button>
+        </div>
+    </div>
+
+    <!-- RRSS -->
+    <div class="face"><img src="{% static 'img/facebook.svg' %}" alt="Facebook" width="20"></div>
+    <div class="insta"><img src="{% static 'img/instagram.svg' %}" alt="Instagram" width="20"></div>
+    <div class="x"><img src="{% static 'img/x.svg' %}" alt="X" width="20"></div>
+
+    <!-- Logo -->
+    <div class="logo">
+        <img src="{% static 'img/logoBlanco.svg' %}" alt="" width="100px">
+    </div>
+    
+    <!-- Promociones -->
+        <div class="suscripcion">
+            <div class="promo">
+                <p>Membresía Pacific Reef</p>
+                <h2>¿Aún no eres Socio?<br> Inscríbete Hoy</h2>
+                <p>Sé recompensado por tus viajes con puntos, noches gratis y estatus.</p>
+                <div>
+                    <button type="button" class="btn bg-warning btn-lg" style="color: white">Inscríbete</button>
+                </div>
+            </div>
+            <div class="imagen"><img src="{% static 'img/suscripcion.jpeg' %}" alt="" width="400"></div>
+        </div>
+    
+    <!-- Habitaciones -->
+    <div class="habitaciones">
+        <div class="habitacion">
+            <h2 id="room">Habitaciones</h2>
+            <p id="rooms">Descubre nuestras habitaciones y suites, cada una<br> con su propio estilo y personalidad.</p>
+            <br>
+            <div class="buttons" style="margin-top: 5px">
+                <button type="button" class="btn bg-warning" style="color: white">Suites Premium</button>
+                <button type="button" class="btn bg-warning" style="color: white">Habitacion Turista</button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Información del Hotel -->
+    <div class="info" style="background-color: #fff">
+        <div class="foto">
+            <img src="{% static 'img/info_hotel.jpeg' %}" alt="" width="700">
+        </div>
+        <div class="informacion" style="color: #f6f6f6; background-color: #3a3b3c; padding: 20px">
+            <h2 id="info">Información del Hotel</h2>
+            <br>
+            <ul>
+                <li><i class="fa fa-clock-o"></i> Check-in 16:00</li>
+                <li><i class="fa fa-clock-o"></i> Check-out 12:00</li>
+                <li><i class="fas fa-smoking-ban"></i> Hotel para no fumadores</li>
+                <li><i class="fas fa-paw"></i> Politica de Mascotas
+                    <p id="politics"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Se admiten mascotas, el número máximo de <br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;mascotas en la habitación: 2</p></li>
+                <li><i class="fas fa-car"></i> Estacionamiento según disponibilidad</li>
+            </ul>
+        </div>
+    </div>
+    
+    <!-- Servicios -->
+    
+    <div class="servicios" style="display: flex; flex-direction: row; justify-content: space-around; align-items: center; padding: 20px">
+        <div class="texto" style="padding: 30px">
+            <h2 style="text-align: center;">Servicios</h2>
+            <p style="font-size: 12pt; text-align: center; line-height: 0">Descubre los servicios que ofrecemos en nuestro hotel</p>
+            <br>
+            <br>
+            <div class="service_list" style="display: flex; flex-direction: row; justify-content: center; align-items: start; line-height: 3.0">
+                <div>
+                    <ul>
+                        <li><i class="fas fa-swimmer"></i> Piscina al aire libre.</li>
+                        <li><i class="fas fa-smoking-ban"></i> Habitaciones sin humo.</li>
+                        <li><i class="fas fa-utensils"></i> Restaurante.</li>
+                        <li><i class="fas fa-umbrella-beach"></i> Situado en la playa.</li>
+                        <li><i class="fas fa-wifi"></i> Wifi Gratis.</li>
+                        <li><i class="fas fa-wheelchair"></i> Adaptado personas de movilidad reducida.</li>
+                    </ul>
+                </div>
+                <div>
+                    <ul>
+                        <li><i class="fas fa-coffee"></i> Desayuno fabuloso.</li>
+                        <li><i class="fas fa-glass-martini-alt"></i> Bar.</li>
+                        <li><i class="fas fa-dumbbell"></i> Gimnasio.</li>
+                        <li><i class="fas fa-spa"></i>SPA y centro de bienestar.</li>
+                        <li><i class="fas fa-concierge-bell"></i> Recepción 24 horas.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="pictures" style="gap: 20px">
+            <div class="container text-center">
+                <div class="row">
+                    <div class="col" style="display: flex; flex-direction: row; justify-content: end; align-items: end">
+                        <img src="{% static 'img/servicios1.jpeg' %}" alt=SPA"" width="485" height="330">
+                    </div>
+                    <div class="col" style="display: flex; flex-direction: column; justify-content: end; align-items: end; gap: 20px">
+                        <img src="{% static 'img/serv1.jpeg' %}" alt="" width="150">
+                        <img src="{% static 'img/serv2.jpeg' %}" alt="" width="150">
+                        <img src="{% static 'img/serv3.jpeg' %}" alt="" width="150">
+                    </div>
+                </div>
+                <br>
+                <div class="row" style="gap: 10px">
+                    <div class="col" style="display: flex; flex-direction: row; justify-content: end; align-items: center; gap: 20px">
+                        <img src="{% static 'img/serv4.jpeg' %}" alt="" width="150">
+                        <img src="{% static 'img/serv5.jpeg' %}" alt="" width="150">
+                        <img src="{% static 'img/serv6.jpeg' %}" alt="" width="150">
+                        <img src="{% static 'img/serv7.jpeg' %}" alt="" width="150">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Comentarios -->
+    <div class="comments" style="display: flex; flex-direction: row; justify-content: center; align-items: center">
+        <div class="title" style=" display: flex; flex-direction: column; justify-content: center; align-items: center; margin-right: 50px">
+            <h2 style="text-align: center; color: #2f2f2f">Comentarios</h2>
+            <p style="font-size: 12pt; text-align: center; line-height: 0; color: #2f2f2f">Descubre lo que nuestros clientes opinan de nosotros</p>
+        </div>
+        <!-- Slider -->
+        <div class="testimonial-slider">
+            <!-- Testimonial List -->
+            <div class="testimonial-list" role="region" aria-label="Testimonials">
+                <!-- Testimonial -->
+                <div class="testimonial">
+                    <!-- Bootstrap Icon -->
+                    <i class="fas fa-quote-left" style="font-size: 25pt"></i>
+
+                    <blockquote>
+                        Excelente quedé sin palabras la atención la amabilidad la limpieza todo estuvo excelente lástima no poder quedarme mas tiempo asta ahora lo mejor en Chile
+                        el restaurante excelente servicio gracias por recibir a nuestra familia espero antes de irme, volver.
+                    </blockquote>
+                    
+
+                    <!-- User Info -->
+                    <div class="user-info">
+                        <div class="user-details">
+                            <p class="name">Sneider</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- /Testimonial -->
+                <!-- Testimonial -->
+                <div class="testimonial">
+                    <!-- Bootstrap Icon -->
+                    <i class="fas fa-quote-left" style="font-size: 25pt"></i>
+
+                    <blockquote>
+                        Excelente. Creo q la palabra que define a este Hotel es SERVICIO siempre estan dispuestos a ayudar y solucionar lo que sea desde como a llegar a un
+                        lugar o como resolver cualquier cosa que se presente. El personal es extremadamente amables y nos sentimos como en casa, siempre con una sonrisa y contandonos cada detalle de las comidas para la cena o el desayuno. 
+                    </blockquote>
+
+                    <!-- User Info -->
+                    <div class="user-info">
+                        <div class="user-details">
+                            <p class="name">Marcelo</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- /Testimonial -->
+                <!-- Testimonial -->
+                <div class="testimonial">
+                    <!-- Bootstrap Icon -->
+                    <i class="fas fa-quote-left" style="font-size: 25pt"></i>
+
+                    <blockquote>
+                        Todo, es un hotel excelente, desde la recepción, la atención del personal, los pequeños detalles en el trato, etc. Un hotel perfecto.
+                    </blockquote>
+
+                    <!-- User Info -->
+                    <div class="user-info">
+                        <div class="user-details">
+                            <p class="name">Ignacio</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- /Testimonial -->
+            </div>
+            <!-- /Testimonial List -->
+            
+
+            <!-- Dot Navigation -->
+            <div class="dots-container"></div>
+            <!-- /Dot Navigation -->
+        </div>
+    </div>
+    <br>
+    <!-- Galería -->
+    <div class="galeria container-fluid" style="background-color: #fff; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 40px 20px 20px 20px; ">
+        <div class="gallery" style="padding: 40px 20px 20px 20px;"></div>
+        <div class="row">
+            <div class="col">
+                <img src="{% static 'img/galeria1.jpeg' %}" alt="" width="920">
+            </div>
+            <div class="col" style="gap: 20px">
+                <div>
+                    <img src="{% static 'img/galeria2.jpeg' %}" alt="" width="400">
+                </div>
+                <br>
+                <div>
+                    <img src="{% static 'img/galeria3.jpeg' %}" alt="" width="400">
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col" style="gap: 20px">
+                <div>
+                    <img src="{% static 'img/galeria5.jpeg' %}" alt="" width="400">
+                </div>
+                <br>
+                <div>
+                    <img src="{% static 'img/galeria6.jpeg' %}" alt="" width="400">
+                </div>
+            </div>
+            <div class="col">
+                <img src="{% static 'img/galeria4.jpeg' %}" alt="" width="920" height="561">
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col">
+                <img src="{% static 'img/galeria7.jpeg' %}" alt="" width="913">
+            </div>
+            <div class="col" style="gap: 20px">
+                <div>
+                    <img src="{% static 'img/galeria8.jpeg' %}" alt="" width="400">
+                </div>
+                <br>
+                <div>
+                    <img src="{% static 'img/galeria9.jpeg' %}" alt="" width="400" height="225">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer container-fluid" style="margin-top: 20px; background-color: #3a3b3c; padding-top: 10px; padding-right: 90px; padding-left: 90px">
+        <div class="row">
+            <div class="col">
+                <div class="redes-sociales" style="display: flex; flex-direction: row; justify-content: end; align-items: center; gap: 20px; padding-bottom: 10px; border-bottom: 2px solid #FFCB74">
+                    <img src="{% static 'img/facebook2.svg' %}" alt="Facebook" width="20">
+                    <img src="{% static 'img/instagram2.svg' %}" alt="Instagram" width="20">
+                    <img src="{% static 'img/x2.svg' %}" alt="X" width="20">
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-4" style="display: flex; flex-direction: column; align-items: start; justify-content: start; padding-bottom: 20px">
+                <img src="{% static 'img/logoDorado.svg' %}" alt="" width="200px">
+            </div>
+            <div class="col-4" style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; padding-bottom: 10px">
+                <a href="#" style="text-decoration: none; font-size: 13pt; color: #FFCB74">Home</a>
+                <a href="#" style="text-decoration: none; font-size: 13pt; color: #FFCB74">Habitaciones</a>
+                <a href="#" style="text-decoration: none; font-size: 13pt; color: #FFCB74">Servicios</a>
+                <a href="#" style="text-decoration: none; font-size: 13pt; color: #FFCB74">Galeria</a>
+                <a href="#" style="text-decoration: none; font-size: 13pt; color: #FFCB74">Reservas</a>
+            </div>
+            <div class="col-4" style="display: flex; flex-direction: column; align-items: end; justify-content: center; padding-bottom: 10px">
+                <p style="color: #FFCB74;"><i class="fas fa-map-marker-alt"></i> Arturo Prat #1670, Iquique</p>
+                <p style="color: #FFCB74;"><i class="fas fa-phone"></i> +562666665</p>
+                <p style="color: #FFCB74;"><i class="fas fa-envelope"></i> administracion@hotelpacificreef.cl</p>
+            </div>
+        </div>
+
+        <div class="row" style="display: flex; flex-direction: column; justify-content: end; align-items: center; padding-top: 20px; border-top: 2px solid #FFCB74">
+            <div class="col">
+                <p class="col" style="text-align: center; color: #FFCB74; font-size: 12px">© 2021 Hotel Pacific Reef. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <!-- Comentarios JS -->
+    <script src="{% static 'js/comments.js' %}"></script>
+</body>
+</html>
