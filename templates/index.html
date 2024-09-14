@@ -37,26 +37,19 @@
         <span><img src="{% static 'img/spain.svg' %}" alt="UK flag" width="20"><a href="#" style="font-size: 9pt"> Bienvenido</a></span>
     </div>
     
-    <div class="container-fluid">
-                    <ul class="nav justify-content-center">
-                        <li class="nav-item">
-                            <a class="nav-link" aria-current="page" style="color: white" href="#">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" style="color: white" href="#">Habitaciones</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" aria-current="page" style="color: white" href="#">Servicios</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" style="color: white" href="#">Galería</a>
-                        </li>
-                    </ul>
+    <div>
+        <div class="topnav">
+            <a href="#">Home</a>
+            <a href="#">Habitaciones</a>
+            <a href="#">Servicios</a>
+            <a href="#">Galería</a>
+        </div>
     </div>
-    
     <div class="sesion">
-        <button type="button" class="btn btn btn-outline-light">Iniciar Sesión</button>
+        <button class="btn btn-default" id="login" onclick="document.getElementById('id01').style.display='block'"> Iniciar Sesión</button>
     </div>
+
+    <button onclick="topFunction()" id="Top" title="Go to top">Volver al Home</button>
 
     <!-- Hero -->
     <div class="hero">
@@ -108,7 +101,7 @@
         <div class="foto">
             <img src="{% static 'img/info_hotel.jpeg' %}" alt="" width="700">
         </div>
-        <div class="informacion" style="color: #f6f6f6; background-color: #3a3b3c; padding: 20px">
+        <div class="informacion" style="color: #f6f6f6; background-color: #3a3b3c; padding: 50px">
             <h2 id="info">Información del Hotel</h2>
             <br>
             <ul>
@@ -253,6 +246,7 @@
     <br>
     <!-- Galería -->
     <div class="galeria container-fluid" style="background-color: #fff; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 40px 20px 20px 20px; ">
+        <h2 style="text-align: center; color: #2f2f2f">Descubre nuestras instalaciones y servicios</h2>
         <div class="gallery" style="padding: 40px 20px 20px 20px;"></div>
         <div class="row">
             <div class="col">
@@ -336,10 +330,56 @@
             </div>
         </div>
     </div>
+    
+    <!-- Modal para Login -->
+    <div id="id01" class="modal" style="padding: 40px" >
+        <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+        
+        <!-- Modal Contenido -->
+
+            <form action="" class="modal-content" style="background-color: #2f2f2f">
+                <div class="imgcontainer" style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+                    <img src="{% static 'img/logoDorado.svg' %}" alt="logo" class="avatar">
+                </div>
+                <br>
+                <br>
+                <div style="gap: 20px; background-color: #2f2f2f">
+                    <div class="form-floating mb-12">
+                        <input type="email" class="form-control" id="floatingInput">
+                        <label for="floatingInput">Email</label>
+                    </div>
+                    <br>
+                    <div class="form-floating mb-12" style="display: flex; flex-direction: column; justify-content: end; align-items: end">
+                        <input type="password" class="form-control" id="pass">
+                        <label for="pass">Contraseña</label>
+                        <span class="psw" style="font-size: 10pt; color:white;">¿Olvidaste tu <a href="#" style="color: white; text-decoration: underline">Contraseña?</a></span>
+                    </div>
+                </div>
+                <br>
+                <div class="d-grid gap-2" style=" gap: 40px; background-color: #2f2f2f" >
+                    <button type="submit" class="btn btn-primary">Iniciar Sesión</button>
+                    <button type="button" onclick="document.getElementById('id01').style.display='none'" class="btn btn-danger">Cancelar</button>
+                </div>
+            </form>
+    </div>
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <!-- Comentarios JS -->
     <script src="{% static 'js/comments.js' %}"></script>
+    <!-- Boton Top -->
+    <script src="{% static 'js/button_top.js' %}"></script>
+    <!-- Modal JS -->
+    <script>
+        // Get the modal
+        var modal = document.getElementById('id01');
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+            if (event.target === modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
 </body>
 </html>
