@@ -1,10 +1,275 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/92c054d238.js" crossorigin="anonymous"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Italiana&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Antic+Didone&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="icon" type="image/x-icon" href="{% static 'img/logoDorado.svg' %}">
+    <link rel="stylesheet" href="{% static 'css/hab_turista.css' %}">
+    <title>Hotel Pacific Reef</title>
 </head>
 <body>
+<div>
+    <div class="topnav">
+        <div>
+            <img src="{% static 'img/logoDorado.svg' %}" alt="Logo" class="logo" width="60">
+        </div>
+        <div style="display: flex; flex-direction: row; justify-content: center">
+            <a href="{% url 'index' %}">Home</a>
+            <a href="{% url 'catalogo_premium' %}">Habitaciones Premium</a>
+        </div>
+        <button class="btn btn-dark" id="login" onclick="document.getElementById('id01').style.display='block'"> Iniciar Sesión</button>
+    </div>
+
+    <!-- Contenido -->
+
+    <!-- Slideshow-->
+    <div id="demo" class="carousel slide" data-bs-ride="carousel">
+
+        <!-- Indicators/dots -->
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="3"></button>
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="4"></button>
+        </div>
+
+        <!-- The slideshow/carousel -->
+        <div class="carousel-inner">
+            <div class="carousel-item active" id="slide1">
+                <div style="position: absolute; z-index: 4; left: 50%; top: 90%; transform: translate(-50%, -50%);"><h2 style="color: white; font-size: 40pt">Habitación Turista</h2></div>
+            </div>
+            <div class="carousel-item" id="slide2">
+                <div style="position: absolute; z-index: 4; left: 50%; top: 90%; transform: translate(-50%, -50%);"><h2 style="color: white; font-size: 40pt">Habitación Turista</h2></div>
+            </div>
+            <div class="carousel-item" id="slide3">
+                <div style="position: absolute; z-index: 4; left: 50%; top: 90%; transform: translate(-50%, -50%);"><h2 style="color: white; font-size: 40pt">Habitación Turista</h2></div>
+            </div>
+            <div class="carousel-item" id="slide4">
+                <div style="position: absolute; z-index: 4; left: 50%; top: 90%; transform: translate(-50%, -50%);"><h2 style="color: white; font-size: 40pt">Habitación Turista</h2></div>
+            </div>
+            <div class="carousel-item" id="slide5">
+                <div style="position: absolute; z-index: 4; left: 50%; top: 90%; transform: translate(-50%, -50%);"><h2 style="color: white; font-size: 40pt">Habitación Turista</h2></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Descripción de la habitación -->
+    <div class="list" style="display: flex; justify-content: space-around; align-items: start">
+        <div>
+            <ul>
+                <li>Habitación privada de 52 mts</li>
+                <li>1 cama Queen Size</li>
+                <li>1 cama de niños opcional</li>
+                <li>Baño completo</li>
+                <li>TV con cable</li>
+                <li>Internet</li>
+                <li>Minibar</li>
+                <li>Desayuno incluido</li>
+            </ul>
+        </div>
+        <div>
+            <ul>
+                <li>Aire Acondicionado</li>
+                <li>Agua caliente</li>
+                <li>Secadora de cabello</li>
+                <li>Plancha</li>
+                <li>Escritorio</li>
+                <li>Armario</li>
+                <li>Almohadas de plumas</li>
+            </ul>
+        </div>
+        <div >
+            <ul>
+                <li>Acceso a la piscina</li>
+                <li>Acceso al restaurante</li>
+                <li>Acceso a la playa</li>
+                <li>Acceso al estacionamiento</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Galería de imágenes -->
+
+    <div style="margin-top: 30px">
+        <div class="responsive">
+            <div class="gallery" >
+                <a target="_blank" href="{% static 'img/galeria_turista1.jpeg' %}">
+                    <img src="{% static 'img/galeria_turista1.jpeg' %}" alt="">
+                </a>
+            </div>
+        </div>
+
+        <div class="responsive">
+            <div class="gallery">
+                <a target="_blank" href="{% static 'img/galeria_turista2.jpeg' %}">
+                    <img src="{% static 'img/galeria_turista2.jpeg' %}" alt="Forest">
+                </a>
+            </div>
+        </div>
+
+        <div class="responsive">
+            <div class="gallery">
+                <a target="_blank" href="{% static 'img/galeria_turista3.jpeg' %}">
+                    <img src="{% static 'img/galeria_turista3.jpeg' %}" alt="Northern Lights">
+                </a>
+            </div>
+        </div>
+
+        <div class="responsive">
+            <div class="gallery">
+                <a target="_blank" href="{% static 'img/galeria_turista4.jpeg' %}">
+                    <img src="{% static 'img/galeria_turista4.jpeg' %}" alt="Mountains">
+                </a>
+            </div>
+        </div>
+
+        <div class="responsive" style="margin-top: 15px">
+            <div class="gallery" >
+                <a target="_blank" href="{% static 'img/galeria_turista5.jpeg' %}">
+                    <img src="{% static 'img/galeria_turista5.jpeg' %}" alt="">
+                </a>
+            </div>
+        </div>
+
+        <div class="responsive" style="margin-top: 15px">
+            <div class="gallery" >
+                <a target="_blank" href="{% static 'img/galeria_turista6.jpeg' %}">
+                    <img src="{% static 'img/galeria_turista6.jpeg' %}" alt="">
+                </a>
+            </div>
+        </div>
+
+        <div class="responsive" style="margin-top: 15px">
+            <div class="gallery" >
+                <a target="_blank" href="{% static 'img/galeria_turista7.jpeg' %}">
+                    <img src="{% static 'img/galeria_turista7.jpeg' %}" alt="">
+                </a>
+            </div>
+        </div>
+
+        <div class="responsive" style="margin-top: 15px">
+            <div class="gallery" >
+                <a target="_blank" href="{% static 'img/galeria_turista8.jpeg' %}">
+                    <img src="{% static 'img/galeria_turista8.jpeg' %}" alt="">
+                </a>
+            </div>
+        </div>
+
+        <div class="clearfix"></div>
+    </div>
+
+    <!-- //Galería de imágenes -->
+
+
+    <!-- Footer -->
+    <div class="footer container-fluid" style="margin-top: 20px; background-color: #3a3b3c; padding-top: 10px; padding-right: 90px; padding-left: 90px">
+        <div class="row">
+            <div class="col">
+                <div class="redes-sociales" style="display: flex; flex-direction: row; justify-content: end; align-items: center; gap: 20px; padding-bottom: 10px; border-bottom: 2px solid #FFCB74">
+                    <img src="{% static 'img/facebook2.svg' %}" alt="Facebook" width="20">
+                    <img src="{% static 'img/instagram2.svg' %}" alt="Instagram" width="20">
+                    <img src="{% static 'img/x2.svg' %}" alt="X" width="20">
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-4" style="display: flex; flex-direction: column; align-items: start; justify-content: start; padding-bottom: 20px">
+                <img src="{% static 'img/logoDorado.svg' %}" alt="" width="200px">
+            </div>
+            <div class="col-4" style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; padding-bottom: 10px">
+                <a href="{% url 'index' %}" style="text-decoration: none; font-size: 13pt; color: #FFCB74">Home</a>
+                <a href="{% url 'catalogo_premium' %}" style="text-decoration: none; font-size: 13pt; color: #FFCB74">Habitaciones Premium</a>
+                <a href="{% url 'reserva' %}" style="text-decoration: none; font-size: 13pt; color: #FFCB74">Reservas</a>
+            </div>
+            <div class="col-4" style="display: flex; flex-direction: column; align-items: end; justify-content: center; padding-bottom: 10px">
+                <p style="color: #FFCB74;"><i class="fas fa-map-marker-alt"></i> Arturo Prat #1670, Iquique</p>
+                <p style="color: #FFCB74;"><i class="fas fa-phone"></i> +562666665</p>
+                <p style="color: #FFCB74;"><i class="fas fa-envelope"></i> administracion@hotelpacificreef.cl</p>
+            </div>
+        </div>
+
+        <div class="row" style="display: flex; flex-direction: column; justify-content: end; align-items: center; padding-top: 20px; border-top: 2px solid #FFCB74">
+            <div class="col">
+                <p class="col" style="text-align: center; color: #FFCB74; font-size: 12px">© 2021 Hotel Pacific Reef. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Modal para Login -->
+    <div id="id01" class="modal" style="padding: 40px" >
+        <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+
+        <!-- Modal Contenido -->
+
+        <form action="" class="modal-content" style="background-color: #2f2f2f">
+            <div class="imgcontainer" style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+                <img src="{% static 'img/logoDorado.svg' %}" alt="logo" class="avatar">
+            </div>
+            <br>
+            <br>
+            <div style="gap: 20px; background-color: #2f2f2f">
+                <div class="form-floating mb-12">
+                    <input type="email" class="form-control" id="floatingInput">
+                    <label for="floatingInput">Email</label>
+                </div>
+                <br>
+                <div class="form-floating mb-12" style="display: flex; flex-direction: column; justify-content: end; align-items: end">
+                    <input type="password" class="form-control" id="pass">
+                    <label for="pass">Contraseña</label>
+                    <span class="psw" style="font-size: 10pt; color: white;">¿Olvidaste tu <button type="button" class="btn btn-link">Contraseña?</button></span>
+                </div>
+            </div>
+            <br>
+            <div class="d-grid gap-2 col-12 mx-auto" style=" gap: 40px; background-color: #2f2f2f; display: flex; flex-direction: column; justify-content: center; align-items: center" >
+                <button type="submit" class="btn btn-primary">Iniciar Sesión</button>
+                <button type="button" onclick="document.getElementById('id01').style.display='none'" class="btn btn-danger">Cancelar</button>
+                <span class="psw" style="font-size: 10pt; color:white;">¿No estás Registrado <button type="button" class="btn btn-link">Registrate Aquí</button></span>
+            </div>
+        </form>
+    </div>
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<!-- Slideshow JS -->
+
+<!-- Modal JS -->
+<script>
+    // Get the modal
+    let modal = document.getElementById('id01');
+
+    // When the user clicks anywhere outside the modal, close it
+    window.onclick = function(event) {
+        if (event.target === modal) {
+            modal.style.display = "none";
+        }
+    }
+</script>
 
 </body>
 </html>

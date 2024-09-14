@@ -39,24 +39,24 @@
     
     <div>
         <div class="topnav">
-            <a href="#">Home</a>
-            <a href="#">Habitaciones</a>
-            <a href="#">Servicios</a>
-            <a href="#">Galería</a>
+            <a href="">Home</a>
+            <a href="#habitaciones">Habitaciones</a>
+            <a href="#servicios">Servicios</a>
+            <a href="#galeria">Galería</a>
         </div>
     </div>
     <div class="sesion">
         <button class="btn btn-default" id="login" onclick="document.getElementById('id01').style.display='block'"> Iniciar Sesión</button>
     </div>
 
-    <button onclick="topFunction()" id="Top" title="Go to top">Volver al Home</button>
+    <button onclick="topFunction()" id="Top" title="Go to top">Volver al Inicio</button>
 
     <!-- Hero -->
-    <div class="hero">
+    <div class="hero" id="hero">
         <div class="hero-text">
             <h1>VIVE EL MOMENTO</h1>
             <p>Pacific Reef Hotel hace que cada estancia sea insuperable, siempre<br>creciendo, pero manteniendo la comodidad y familiaridad</p>
-            <button type="button" class="btn bg-warning btn-lg" style="color: #2f2f2f">Reservas</button>
+            <button type="button" class="btn bg-warning btn-lg" style="color: #2f2f2f"><a href="{% url 'reserva' %}">Reservas</a></button>
         </div>
     </div>
 
@@ -77,21 +77,21 @@
                 <h2>¿Aún no eres Socio?<br> Inscríbete Hoy</h2>
                 <p>Sé recompensado por tus viajes con puntos, noches gratis y estatus.</p>
                 <div>
-                    <button type="button" class="btn bg-warning btn-lg" style="color: white">Inscríbete</button>
+                    <button type="button" class="btn bg-warning btn-lg" style="color: #2f2f2f" onclick="document.getElementById('id02').style.display='block'">Inscríbete</button>
                 </div>
             </div>
             <div class="imagen"><img src="{% static 'img/suscripcion.jpeg' %}" alt="" width="400"></div>
         </div>
     
     <!-- Habitaciones -->
-    <div class="habitaciones">
+    <div class="habitaciones" id="habitaciones">
         <div class="habitacion">
             <h2 id="room">Habitaciones</h2>
             <p id="rooms">Descubre nuestras habitaciones y suites, cada una<br> con su propio estilo y personalidad.</p>
             <br>
             <div class="buttons" style="margin-top: 5px">
-                <button type="button" class="btn bg-warning" style="color: white">Suites Premium</button>
-                <button type="button" class="btn bg-warning" style="color: white">Habitacion Turista</button>
+                <button type="button" class="btn bg-warning" style="color: #2f2f2f">Suites Premium</button>
+                <button type="button" class="btn bg-warning" style="color: #2f2f2f">Habitacion Turista</button>
             </div>
         </div>
     </div>
@@ -117,7 +117,7 @@
     
     <!-- Servicios -->
     
-    <div class="servicios" style="display: flex; flex-direction: row; justify-content: space-around; align-items: center; padding: 20px">
+    <div class="servicios" style="display: flex; flex-direction: row; justify-content: space-around; align-items: center; padding: 20px" id="servicios">
         <div class="texto" style="padding: 30px">
             <h2 style="text-align: center;">Servicios</h2>
             <p style="font-size: 12pt; text-align: center; line-height: 0">Descubre los servicios que ofrecemos en nuestro hotel</p>
@@ -130,7 +130,7 @@
                         <li><i class="fas fa-smoking-ban"></i> Habitaciones sin humo.</li>
                         <li><i class="fas fa-utensils"></i> Restaurante.</li>
                         <li><i class="fas fa-umbrella-beach"></i> Situado en la playa.</li>
-                        <li><i class="fas fa-wifi"></i> Wifi Gratis.</li>
+                        <li><i class="fas fa-wifi"></i> Wi-Fi Gratis.</li>
                         <li><i class="fas fa-wheelchair"></i> Adaptado personas de movilidad reducida.</li>
                     </ul>
                 </div>
@@ -245,7 +245,7 @@
     </div>
     <br>
     <!-- Galería -->
-    <div class="galeria container-fluid" style="background-color: #fff; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 40px 20px 20px 20px; ">
+    <div class="galeria container-fluid" style="background-color: #fff; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 40px 20px 20px 20px; " id="galeria">
         <h2 style="text-align: center; color: #2f2f2f">Descubre nuestras instalaciones y servicios</h2>
         <div class="gallery" style="padding: 40px 20px 20px 20px;"></div>
         <div class="row">
@@ -311,11 +311,11 @@
                 <img src="{% static 'img/logoDorado.svg' %}" alt="" width="200px">
             </div>
             <div class="col-4" style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; padding-bottom: 10px">
-                <a href="#" style="text-decoration: none; font-size: 13pt; color: #FFCB74">Home</a>
-                <a href="#" style="text-decoration: none; font-size: 13pt; color: #FFCB74">Habitaciones</a>
-                <a href="#" style="text-decoration: none; font-size: 13pt; color: #FFCB74">Servicios</a>
-                <a href="#" style="text-decoration: none; font-size: 13pt; color: #FFCB74">Galeria</a>
-                <a href="#" style="text-decoration: none; font-size: 13pt; color: #FFCB74">Reservas</a>
+                <a href="{% url 'index' %}" style="text-decoration: none; font-size: 13pt; color: #FFCB74">Home</a>
+                <a href="#habitaciones" style="text-decoration: none; font-size: 13pt; color: #FFCB74">Habitaciones</a>
+                <a href="#servicios" style="text-decoration: none; font-size: 13pt; color: #FFCB74">Servicios</a>
+                <a href="#galeria" style="text-decoration: none; font-size: 13pt; color: #FFCB74">Galeria</a>
+                <a href="{% url 'reserva' %}" style="text-decoration: none; font-size: 13pt; color: #FFCB74">Reservas</a>
             </div>
             <div class="col-4" style="display: flex; flex-direction: column; align-items: end; justify-content: center; padding-bottom: 10px">
                 <p style="color: #FFCB74;"><i class="fas fa-map-marker-alt"></i> Arturo Prat #1670, Iquique</p>
@@ -345,22 +345,54 @@
                 <br>
                 <div style="gap: 20px; background-color: #2f2f2f">
                     <div class="form-floating mb-12">
-                        <input type="email" class="form-control" id="floatingInput">
+                        <input type="email" class="form-control" id="floatingInput" >
                         <label for="floatingInput">Email</label>
                     </div>
                     <br>
                     <div class="form-floating mb-12" style="display: flex; flex-direction: column; justify-content: end; align-items: end">
                         <input type="password" class="form-control" id="pass">
                         <label for="pass">Contraseña</label>
-                        <span class="psw" style="font-size: 10pt; color:white;">¿Olvidaste tu <a href="#" style="color: white; text-decoration: underline">Contraseña?</a></span>
+                        <span class="psw" style="font-size: 10pt; color: white;">¿Olvidaste tu <a href="#" style="color: #FFCB74; text-decoration: underline">Contraseña?</a></span>
                     </div>
                 </div>
                 <br>
-                <div class="d-grid gap-2" style=" gap: 40px; background-color: #2f2f2f" >
+                <div class="d-grid gap-2 col-12 mx-auto" style=" gap: 40px; background-color: #2f2f2f; display: flex; flex-direction: column; justify-content: center; align-items: center" >
                     <button type="submit" class="btn btn-primary">Iniciar Sesión</button>
                     <button type="button" onclick="document.getElementById('id01').style.display='none'" class="btn btn-danger">Cancelar</button>
+                    <span class="psw" style="font-size: 10pt; color:white;">¿No estás Registrado? <button class="btn btn-link" onclick="document.getElementById('id02').style.display='block'">Registrate</button></span>
                 </div>
             </form>
+    </div>
+
+    <!-- Modal para SingUp -->
+    <div id="id02" class="modal" style="padding: 40px" >
+        <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+
+        <!-- Modal Contenido -->
+
+        <form action="" class="modal-content" style="background-color: #2f2f2f">
+            <div class="imgcontainer" style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+                <img src="{% static 'img/logoDorado.svg' %}" alt="logo" class="avatar">
+            </div>
+            <br>
+            <br>
+            <div style="gap: 20px; background-color: #2f2f2f">
+                <div class="form-floating mb-12">
+                    <input type="text" class="form-control" id="floatingInput">
+                    <label for="floatingInput">Nombre</label>
+                </div>
+                <br>
+                <div class="form-floating mb-12" style="display: flex; flex-direction: column; justify-content: end; align-items: end">
+                    <input type="text" class="form-control" id="pass">
+                    <label for="pass">Apellido</label>
+                    <span class="psw" style="font-size: 10pt; color: white;">¿Olvidaste tu <button class="btn btn-link">Contraseña?</button></span>
+                </div>
+            </div>
+            <br>
+            <div class="d-grid gap-2 col-12 mx-auto" style=" gap: 40px; background-color: #2f2f2f; display: flex; flex-direction: column; justify-content: center; align-items: center" >
+                <button type="submit" class="btn btn-primary">Registrarse</button>
+            </div>
+        </form>
     </div>
 
     <!-- Bootstrap JS -->
@@ -369,17 +401,22 @@
     <script src="{% static 'js/comments.js' %}"></script>
     <!-- Boton Top -->
     <script src="{% static 'js/button_top.js' %}"></script>
-    <!-- Modal JS -->
+    <!-- Modal Login JS -->
     <script>
         // Get the modal
-        var modal = document.getElementById('id01');
+        let modal = document.getElementById('id01');
+        let modals = document.getElementById('id02');
 
-        // When the user clicks anywhere outside of the modal, close it
+        // When the user clicks anywhere outside the modal, close it
         window.onclick = function(event) {
             if (event.target === modal) {
                 modal.style.display = "none";
             }
+            else if (event.target === modals) {
+                modals.style.display = "none";
+            }
         }
     </script>
+
 </body>
 </html>

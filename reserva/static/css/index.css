@@ -167,6 +167,7 @@ h2{
     align-items: center;
     gap: 20px;
     font-family: "Montserrat", sans-serif;
+    color: #2f2f2f;
 }
 
 li{
@@ -336,7 +337,7 @@ button {
     border: none;
     outline: none;
     background-color: #FFCB74;
-    color: white;
+    color: #2f2f2f;
     cursor: pointer;
     padding: 15px;
     border-radius: 10px;
@@ -383,37 +384,6 @@ button {
     color: white;
 }
 
-/* Style the input container */
-.topnav .login-container {
-    float: right;
-}
-
-/* Style the input field inside the navbar */
-.topnav input[type=text] {
-    padding: 6px;
-    margin-top: 8px;
-    font-size: 17px;
-    border: 1px solid white;
-    width: 150px; /* adjust as needed (as long as it doesn't break the topnav) */
-    background-color: transparent;
-}
-
-/* Style the button inside the input container */
-.topnav .login-container button {
-    float: right;
-    padding: 6px;
-    margin-top: 8px;
-    margin-right: 16px;
-    background: transparent;
-    font-size: 17px;
-    border: 1px solid white;
-    color: white;
-    cursor: pointer;
-}
-
-.topnav .login-container button:hover {
-    background: transparent;
-}
 
 /* Add responsiveness - On small screens, display the navbar vertically instead of horizontally */
 @media screen and (max-width: 600px) {

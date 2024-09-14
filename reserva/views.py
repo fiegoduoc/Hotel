@@ -12,3 +12,7 @@ def catalogo_premium(request):
 
 def catalogo_turista(request):
     return render(request, 'catalogo_turista.html')
+
+
+def reserva(request):
+    return render(request, 'reservas/reserva.html')
