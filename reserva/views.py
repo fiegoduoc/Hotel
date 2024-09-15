@@ -16,3 +16,11 @@ def catalogo_turista(request):
 
 def reserva(request):
     return render(request, 'reservas/reserva.html')
+
+
+def signup(request):
+    return render(request, 'SignUp.html')
+
+
+def signin(request):
+    return render(request, 'SignIn.html')

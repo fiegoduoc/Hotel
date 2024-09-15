@@ -204,6 +204,8 @@
                 <a href="{% url 'index' %}" style="text-decoration: none; font-size: 13pt; color: #FFCB74">Home</a>
                 <a href="{% url 'catalogo_premium' %}" style="text-decoration: none; font-size: 13pt; color: #FFCB74">Habitaciones Premium</a>
                 <a href="{% url 'reserva' %}" style="text-decoration: none; font-size: 13pt; color: #FFCB74">Reservas</a>
+                <button class="btn btn-link" onclick="document.getElementById('id02').style.display='block'">Registrarse</button>
+                <button class="btn btn-link" onclick="document.getElementById('id01').style.display='block'">Iniciar Sesión</button>
             </div>
             <div class="col-4" style="display: flex; flex-direction: column; align-items: end; justify-content: center; padding-bottom: 10px">
                 <p style="color: #FFCB74;"><i class="fas fa-map-marker-alt"></i> Arturo Prat #1670, Iquique</p>
@@ -252,6 +254,37 @@
             </div>
         </form>
     </div>
+
+    <!-- Modal para SingUp -->
+    <div id="id02" class="modal" style="padding: 40px" >
+        <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+
+        <!-- Modal Contenido -->
+
+        <form action="" class="modal-content" style="background-color: #2f2f2f">
+            <div class="imgcontainer" style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+                <img src="{% static 'img/logoDorado.svg' %}" alt="logo" class="avatar">
+            </div>
+            <br>
+            <br>
+            <div style="gap: 20px; background-color: #2f2f2f">
+                <div class="form-floating mb-12">
+                    <input type="text" class="form-control" id="floatingInput">
+                    <label for="floatingInput">Nombre</label>
+                </div>
+                <br>
+                <div class="form-floating mb-12" style="display: flex; flex-direction: column; justify-content: end; align-items: end">
+                    <input type="text" class="form-control" id="pass">
+                    <label for="pass">Apellido</label>
+                    <span class="psw" style="font-size: 10pt; color: white;">¿Olvidaste tu <button class="btn btn-link">Contraseña?</button></span>
+                </div>
+            </div>
+            <br>
+            <div class="d-grid gap-2 col-12 mx-auto" style=" gap: 40px; background-color: #2f2f2f; display: flex; flex-direction: column; justify-content: center; align-items: center" >
+                <button type="submit" class="btn btn-primary">Registrarse</button>
+            </div>
+        </form>
+    </div>
 </div>
 
 <!-- Bootstrap JS -->
@@ -262,11 +295,15 @@
 <script>
     // Get the modal
     let modal = document.getElementById('id01');
+    let modals = document.getElementById('id02');
 
     // When the user clicks anywhere outside the modal, close it
     window.onclick = function(event) {
         if (event.target === modal) {
             modal.style.display = "none";
+        }
+        else if (event.target === modals) {
+            modals.style.display = "none";
         }
     }
 </script>

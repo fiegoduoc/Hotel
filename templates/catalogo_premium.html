@@ -206,6 +206,8 @@
                     <a href="{% url 'index' %}" style="text-decoration: none; font-size: 13pt; color: #FFCB74">Home</a>
                     <a href="{% url 'catalogo_turista' %}" style="text-decoration: none; font-size: 13pt; color: #FFCB74">Habitaciones Turista</a>
                     <a href="{% url 'reserva' %}" style="text-decoration: none; font-size: 13pt; color: #FFCB74">Reservas</a>
+                    <button class="btn btn-link" onclick="document.getElementById('id02').style.display='block'">Registrarse</button>
+                    <button class="btn btn-link" onclick="document.getElementById('id01').style.display='block'">Iniciar Sesión</button>
                 </div>
                 <div class="col-4" style="display: flex; flex-direction: column; align-items: end; justify-content: center; padding-bottom: 10px">
                     <p style="color: #FFCB74;"><i class="fas fa-map-marker-alt"></i> Arturo Prat #1670, Iquique</p>
@@ -258,17 +260,19 @@
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-        <!-- Slideshow JS -->
-
     <!-- Modal JS -->
     <script>
         // Get the modal
         let modal = document.getElementById('id01');
+        let modals = document.getElementById('id02');
 
         // When the user clicks anywhere outside the modal, close it
         window.onclick = function(event) {
             if (event.target === modal) {
                 modal.style.display = "none";
+            }
+            else if (event.target === modals) {
+                modals.style.display = "none";
             }
         }
     </script>

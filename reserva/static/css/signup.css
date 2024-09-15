@@ -1,0 +1,173 @@
+
+
+/* Fonts */
+
+.italiana-regular {
+    font-family: "Italiana", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.antic-didone-regular {
+    font-family: "Antic Didone", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.lato-regular {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+.montserrat{
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+body, html {
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    font-family: "Montserrat", sans-serif;
+}
+
+#picture{
+    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.5)), url('../img/signup.jpeg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 50%;
+    position: relative;
+}
+
+h2{
+    font-family: "Montserrat", sans-serif;
+    text-align: left;
+    color: #FFCB74;
+}
+
+/*Stepper*/
+
+.step__header{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 1000;
+    top: 2%;
+    right: 15%;
+}
+
+.stepper {
+    position: absolute;
+    top: 20%;
+    right: 10%;
+    display: flex;
+    justify-content: space-between;
+    width: 30rem;
+}
+.step--1,
+.step--2,
+.step--3,
+.step--4 {
+    width: 4.5rem;
+    height: 4.5rem;
+    border-radius: 50%;
+    background: #CCCCCC;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+
+.form {
+    position: absolute;
+    top: 40%;
+    right: 5%;
+    width: 40vw;
+    display: none;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.form__btn {
+    background: #FFCB74;
+    color: #fff;
+    outline: none;
+    border: none;
+    padding: 0.5rem 0.7rem;
+    width: 7rem;
+    margin: 1rem auto;
+    border-radius: 4px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+.form--message-text {
+    width: auto;
+    height: auto;
+    background: #2f2f2f;
+    color: #FFCB74;
+    text-align: center;
+    font-size: 20pt;
+    animation: fadeIn 0.8s;
+    border-radius: 4px;
+    padding: 20px;
+    border: 1px solid #FFCB74;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-active {
+    z-index: 1000;
+    display: block;
+}
+.form-active-animate {
+    animation: moveRight 1s;
+}
+.form-inactive {
+    display: block;
+    animation: moveLeft 1s;
+}
+
+.step-active {
+    background: #FFCB74;
+    color: #fff;
+}
+
+@keyframes moveRight {
+    0% {
+        transform: translateX(-27rem) scale(0.9);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0rem) scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes moveLeft {
+    0% {
+        transform: translateX(0rem) scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(27rem) scale(0.9);
+        opacity: 0;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}

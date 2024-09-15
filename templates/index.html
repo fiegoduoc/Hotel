@@ -46,7 +46,7 @@
         </div>
     </div>
     <div class="sesion">
-        <button class="btn btn-default" id="login" onclick="document.getElementById('id01').style.display='block'"> Iniciar Sesión</button>
+        <button class="btn btn-default" id="login"><a href="{% url 'signin' %}">Iniciar Sesión</a></button>
     </div>
 
     <button onclick="topFunction()" id="Top" title="Go to top">Volver al Inicio</button>
@@ -90,8 +90,8 @@
             <p id="rooms">Descubre nuestras habitaciones y suites, cada una<br> con su propio estilo y personalidad.</p>
             <br>
             <div class="buttons" style="margin-top: 5px">
-                <button type="button" class="btn bg-warning" style="color: #2f2f2f">Suites Premium</button>
-                <button type="button" class="btn bg-warning" style="color: #2f2f2f">Habitacion Turista</button>
+                <button type="button" class="btn bg-warning"  style="color: #2f2f2f"><a href="{% url 'catalogo_premium' %}">Suites Premium</a></button>
+                <button type="button" class="btn bg-warning" style="color: #2f2f2f" ><a href="{% url 'catalogo_turista' %}">Habitaciones Turista</a></button>
             </div>
         </div>
     </div>
@@ -316,6 +316,8 @@
                 <a href="#servicios" style="text-decoration: none; font-size: 13pt; color: #FFCB74">Servicios</a>
                 <a href="#galeria" style="text-decoration: none; font-size: 13pt; color: #FFCB74">Galeria</a>
                 <a href="{% url 'reserva' %}" style="text-decoration: none; font-size: 13pt; color: #FFCB74">Reservas</a>
+                <button class="btn btn-link">Registrarse</button>
+                <button class="btn btn-link">Iniciar Sesión</button>
             </div>
             <div class="col-4" style="display: flex; flex-direction: column; align-items: end; justify-content: center; padding-bottom: 10px">
                 <p style="color: #FFCB74;"><i class="fas fa-map-marker-alt"></i> Arturo Prat #1670, Iquique</p>
@@ -362,6 +364,37 @@
                     <span class="psw" style="font-size: 10pt; color:white;">¿No estás Registrado? <button class="btn btn-link" onclick="document.getElementById('id02').style.display='block'">Registrate</button></span>
                 </div>
             </form>
+    </div>
+
+    <!-- Modal para SingUp -->
+    <div id="id02" class="modal" style="padding: 40px" >
+        <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+
+        <!-- Modal Contenido -->
+
+        <form action="" class="modal-content" style="background-color: #2f2f2f">
+            <div class="imgcontainer" style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+                <img src="{% static 'img/logoDorado.svg' %}" alt="logo" class="avatar">
+            </div>
+            <br>
+            <br>
+            <div style="gap: 20px; background-color: #2f2f2f">
+                <div class="form-floating mb-12">
+                    <input type="text" class="form-control" id="floatingInput">
+                    <label for="floatingInput">Nombre</label>
+                </div>
+                <br>
+                <div class="form-floating mb-12" style="display: flex; flex-direction: column; justify-content: end; align-items: end">
+                    <input type="text" class="form-control" id="pass">
+                    <label for="pass">Apellido</label>
+                    <span class="psw" style="font-size: 10pt; color: white;">¿Olvidaste tu <button class="btn btn-link">Contraseña?</button></span>
+                </div>
+            </div>
+            <br>
+            <div class="d-grid gap-2 col-12 mx-auto" style=" gap: 40px; background-color: #2f2f2f; display: flex; flex-direction: column; justify-content: center; align-items: center" >
+                <button type="submit" class="btn btn-primary">Registrarse</button>
+            </div>
+        </form>
     </div>
 
     <!-- Modal para SingUp -->
