@@ -39,7 +39,7 @@
                 <a href="{% url 'index' %}">Home</a>
                 <a href="{% url 'catalogo_turista' %}">Habitaciones Turista</a>
             </div>
-            <button class="btn btn-dark" id="login" onclick="document.getElementById('id01').style.display='block'"> Iniciar Sesión</button>
+            <button class="btn btn-link" ><a href="{% url 'signin' %}" style="color: #FFCB74">Iniciar Sesión</a></button>
         </div>
 
         <!-- Contenido -->
@@ -222,60 +222,9 @@
                 </div>
             </div>
         </div>  
-
-
-    <!-- Modal para Login -->
-    <div id="id01" class="modal" style="padding: 40px" >
-        <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-
-        <!-- Modal Contenido -->
-
-        <form action="" class="modal-content" style="background-color: #2f2f2f">
-            <div class="imgcontainer" style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
-                <img src="{% static 'img/logoDorado.svg' %}" alt="logo" class="avatar">
-            </div>
-            <br>
-            <br>
-            <div style="gap: 20px; background-color: #2f2f2f">
-                <div class="form-floating mb-12">
-                    <input type="email" class="form-control" id="floatingInput">
-                    <label for="floatingInput">Email</label>
-                </div>
-                <br>
-                <div class="form-floating mb-12" style="display: flex; flex-direction: column; justify-content: end; align-items: end">
-                    <input type="password" class="form-control" id="pass">
-                    <label for="pass">Contraseña</label>
-                    <span class="psw" style="font-size: 10pt; color: white;">¿Olvidaste tu <button type="button" class="btn btn-link">Contraseña?</button></span>
-                </div>
-            </div>
-            <br>
-            <div class="d-grid gap-2 col-12 mx-auto" style=" gap: 40px; background-color: #2f2f2f; display: flex; flex-direction: column; justify-content: center; align-items: center" >
-                <button type="submit" class="btn btn-primary">Iniciar Sesión</button>
-                <button type="button" onclick="document.getElementById('id01').style.display='none'" class="btn btn-danger">Cancelar</button>
-                <span class="psw" style="font-size: 10pt; color:white;">¿No estás Registrado <button type="button" class="btn btn-link">Registrate Aquí</button></span>
-            </div>
-        </form>
     </div>
-    </div>
-
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <!-- Modal JS -->
-    <script>
-        // Get the modal
-        let modal = document.getElementById('id01');
-        let modals = document.getElementById('id02');
-
-        // When the user clicks anywhere outside the modal, close it
-        window.onclick = function(event) {
-            if (event.target === modal) {
-                modal.style.display = "none";
-            }
-            else if (event.target === modals) {
-                modals.style.display = "none";
-            }
-        }
-    </script>
 
 </body>
 </html>

@@ -1,10 +1,159 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/92c054d238.js" crossorigin="anonymous"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Italiana&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Antic+Didone&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="icon" type="image/x-icon" href="{% static 'img/logoDorado.svg' %}">
+    <link rel="stylesheet" href="{% static 'css/reserva.css' %}">
+    <title>Hotel Pacific Reef</title>
 </head>
 <body>
+        <!-- Navbar -->
+        <div style="display: flex; flex-direction: column; justify-content: center; align-items: center">
+            <div class="topnav">
+                <div>
+                    <img src="{% static 'img/logoDorado.svg' %}" alt="Logo" class="logo" width="60">
+                </div>
+                <div style="display: flex; flex-direction: row; justify-content: center">
+                    <a href="{% url 'index' %}">Home</a>
+                    <a href="{% url 'catalogo_turista' %}">Habitaciones <br>Turista</a>
+                    <a href="{% url 'catalogo_premium' %}">Habitaciones <br>Premium</a>
+                </div>
+                <div style="display: flex; flex-direction: row; justify-content: end; align-items: center">
+                    <p style="color: #FFCB74">@usuario</p>
+                    <button class="btn btn-link"><a href="{% url 'index' %}" style="color: #FFCB74"><p>Cerrar Sesión</p></a></button>
+                </div>
+            </div>
+        </div>
+        
 
+        <!-- Reserva -->
+            <div style="padding: 30px">
+                <div class="row">
+                    <div class="col">
+                        <h2 class="titulo">Buscar Habitación</h2>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col" id="in">
+                        <div class="form-floating mb-3" >
+                            <input type="date" class="form-control" id="check_in">
+                            <label for="check_in">Check-In</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="date" class="form-control" id="check_out">
+                            <label for="check_out">Check-Out</label>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-floating mb-3">
+                            <input type="number" class="form-control" id="hab" >
+                            <label for="hab">Habitaciones</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <select class="form-select" id="habitaciones" >
+                                <option selected>¿Trae Mascotas?</option>
+                                <option value="1">Sí</option>
+                                <option value="2">No</option>
+                            </select>
+                            <label for="habitaciones">Mascotas</label>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-floating mb-3">
+                            <input type="number" class="form-control" id="adultos" >
+                            <label for="adultos">Adultos</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <select class="form-select" id="necesidad" >
+                                <option selected>¿Tiene alguna Necesidad Especial?</option>
+                                <option value="1">No</option>
+                                <option value="2">Discapacidad Física</option>
+                                <option value="2">Neurodivergencia</option>
+                            </select>
+                            <label for="necesidad">Necesidades Especiales</label>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-floating mb-3">
+                            <input type="number" class="form-control" id="niños" >
+                            <label for="niños">Niños mayores de 3 años</label>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="row" >
+                    <div class="col">
+                        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                            <button type="submit" class="btn btn-warning">Buscar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+     
+        
+        <!-- Footer -->
+        <div class="footer container-fluid" style="margin-top: 20px; background-color: #3a3b3c; padding-top: 10px; padding-right: 90px; padding-left: 90px">
+            <div class="row">
+                <div class="col">
+                    <div class="redes-sociales" style="display: flex; flex-direction: row; justify-content: end; align-items: center; gap: 20px; padding-bottom: 10px; border-bottom: 2px solid #FFCB74">
+                        <img src="{% static 'img/facebook2.svg' %}" alt="Facebook" width="20">
+                        <img src="{% static 'img/instagram2.svg' %}" alt="Instagram" width="20">
+                        <img src="{% static 'img/x2.svg' %}" alt="X" width="20">
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-4" style="display: flex; flex-direction: column; align-items: start; justify-content: start; padding-bottom: 20px">
+                    <img src="{% static 'img/logoDorado.svg' %}" alt="" width="200px">
+                </div>
+                <div class="col-4" style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; padding-bottom: 10px">
+                    <a href="{% url 'index' %}" style="text-decoration: none; font-size: 13pt; color: #FFCB74">Home</a>
+                    <a href="{% url 'catalogo_premium' %}" style="text-decoration: none; font-size: 13pt; color: #FFCB74">Habitaciones Premium</a>
+                    <a href="{% url 'catalogo_turista' %}" style="text-decoration: none; font-size: 13pt; color: #FFCB74">Habitaciones Turista</a>
+                    <a href="{% url 'reserva' %}" style="text-decoration: none; font-size: 13pt; color: #FFCB74">Reservas</a>
+                    <button class="btn btn-link"><a href="{% url 'signup' %}" style="color: #FFCB74">Registrarse</a></button>
+                    <button class="btn btn-link"><a href="{% url 'signin' %}" style="color: #FFCB74">Iniciar Sesión</a></button>
+                </div>
+                <div class="col-4" style="display: flex; flex-direction: column; align-items: end; justify-content: center; padding-bottom: 10px">
+                    <p style="color: #FFCB74;"><i class="fas fa-map-marker-alt"></i> Arturo Prat #1670, Iquique</p>
+                    <p style="color: #FFCB74;"><i class="fas fa-phone"></i> +562666665</p>
+                    <p style="color: #FFCB74;"><i class="fas fa-envelope"></i> administracion@hotelpacificreef.cl</p>
+                </div>
+
+            <div class="row" style="display: flex; flex-direction: column; justify-content: end; align-items: center; padding-top: 20px; border-top: 2px solid #FFCB74">
+                <div class="col">
+                    <p class="col" style="text-align: center; color: #FFCB74; font-size: 12px">© 2021 Hotel Pacific Reef. Todos los derechos reservados.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>

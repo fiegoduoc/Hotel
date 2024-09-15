@@ -24,3 +24,10 @@ def signup(request):
 
 def signin(request):
     return render(request, 'SignIn.html')
+
+
+def disponibilidad(request):
+    return render(request, 'reservas/disponibilidad.html')
+
+def pago(request):
+    return render(request, 'reservas/pago.html')
