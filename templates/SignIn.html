@@ -34,21 +34,19 @@
     <div class="" style="width: 100vw; height: 100vh; background-color: #2f2f2f">
         <div class="row" style="display: flex; flex-direction: row; justify-content: center; align-items: center;">
             <div class="col" style="display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 20px;">
-                <img src="{% static 'img/logoDorado.svg' %}" alt="logo" width="200" height="200">
+                <img src="{% static 'img/logoDorado.svg' %}" alt="logo" width="250" height="250">
 
-                <div class="mb-3" style="width: 50%">
-                    <label for="formGroupExampleInput" class="form-label" style="color: white">Email</label>
-                    <input type="email" class="form-control form-control-lg" id="formGroupExampleInput" style="background-color: transparent">
+                <div class="form-floating mb-3" style="width: 30vw; margin-top: 30px">
+                    <input type="email" class="form-control" id="floatingInput" >
+                    <label for="floatingInput">Email</label>
                 </div>
-                <div class="mb-3" style="width: 50%">
-                    <label for="formGroupExampleInput2" class="form-label" style="color: white">Contraseña</label>
-                    <input type="password" class="form-control form-control-lg" id="formGroupExampleInput2" style="background-color: transparent">
-                    <div style="display: flex; flex-direction: row; justify-content: end; align-items: end;">
-                        <span><a href="#" style="color: #FFCB74">Olvidé mi Contraseña</a></span>
-                    </div>
+                <div class="form-floating mb-3" style="width: 30vw">
+                    <input type="password" class="form-control" id="floatingPassword" >
+                    <label for="floatingPassword">Contraseña</label>
                 </div>
+                
                 <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; width: 100%; gap: 10px">
-                    <button class="btn btn-primary d-grid gap-2 col-6 mx-auto" type="submit">Iniciar Sesión</button>
+                    <button class="btn btn-warning d-grid gap-2 col-6 mx-auto" type="submit" style="color: white">Iniciar Sesión</button>
                     <button class="btn btn-secondary d-grid gap-2 col-6 mx-auto" type="submit">Volver</button>
                 </div>
                 <div>

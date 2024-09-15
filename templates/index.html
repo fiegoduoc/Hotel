@@ -169,84 +169,9 @@
             </div>
         </div>
     </div>
-    
-    <!-- Comentarios -->
-    <div class="comments" style="display: flex; flex-direction: row; justify-content: center; align-items: center">
-        <div class="title" style=" display: flex; flex-direction: column; justify-content: center; align-items: center; margin-right: 50px">
-            <h2 style="text-align: center; color: #2f2f2f">Comentarios</h2>
-            <p style="font-size: 12pt; text-align: center; line-height: 0; color: #2f2f2f">Descubre lo que nuestros clientes opinan de nosotros</p>
-        </div>
-        <!-- Slider -->
-        <div class="testimonial-slider">
-            <!-- Testimonial List -->
-            <div class="testimonial-list" role="region" aria-label="Testimonials">
-                <!-- Testimonial -->
-                <div class="testimonial">
-                    <!-- Bootstrap Icon -->
-                    <i class="fas fa-quote-left" style="font-size: 25pt"></i>
 
-                    <blockquote>
-                        Excelente quedé sin palabras la atención la amabilidad la limpieza todo estuvo excelente lástima no poder quedarme mas tiempo asta ahora lo mejor en Chile
-                        el restaurante excelente servicio gracias por recibir a nuestra familia espero antes de irme, volver.
-                    </blockquote>
-                    
-
-                    <!-- User Info -->
-                    <div class="user-info">
-                        <div class="user-details">
-                            <p class="name">Sneider</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- /Testimonial -->
-                <!-- Testimonial -->
-                <div class="testimonial">
-                    <!-- Bootstrap Icon -->
-                    <i class="fas fa-quote-left" style="font-size: 25pt"></i>
-
-                    <blockquote>
-                        Excelente. Creo q la palabra que define a este Hotel es SERVICIO siempre estan dispuestos a ayudar y solucionar lo que sea desde como a llegar a un
-                        lugar o como resolver cualquier cosa que se presente. El personal es extremadamente amables y nos sentimos como en casa, siempre con una sonrisa y contandonos cada detalle de las comidas para la cena o el desayuno. 
-                    </blockquote>
-
-                    <!-- User Info -->
-                    <div class="user-info">
-                        <div class="user-details">
-                            <p class="name">Marcelo</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- /Testimonial -->
-                <!-- Testimonial -->
-                <div class="testimonial">
-                    <!-- Bootstrap Icon -->
-                    <i class="fas fa-quote-left" style="font-size: 25pt"></i>
-
-                    <blockquote>
-                        Todo, es un hotel excelente, desde la recepción, la atención del personal, los pequeños detalles en el trato, etc. Un hotel perfecto.
-                    </blockquote>
-
-                    <!-- User Info -->
-                    <div class="user-info">
-                        <div class="user-details">
-                            <p class="name">Ignacio</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- /Testimonial -->
-            </div>
-            <!-- /Testimonial List -->
-            
-
-            <!-- Dot Navigation -->
-            <div class="dots-container"></div>
-            <!-- /Dot Navigation -->
-        </div>
-    </div>
-    <br>
     <!-- Galería -->
     <div class="galeria container-fluid" style="background-color: #fff; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 40px 20px 20px 20px; " id="galeria">
-        <h2 style="text-align: center; color: #2f2f2f">Descubre nuestras instalaciones y servicios</h2>
         <div class="gallery" style="padding: 40px 20px 20px 20px;"></div>
         <div class="row">
             <div class="col">
@@ -310,14 +235,22 @@
             <div class="col-4" style="display: flex; flex-direction: column; align-items: start; justify-content: start; padding-bottom: 20px">
                 <img src="{% static 'img/logoDorado.svg' %}" alt="" width="200px">
             </div>
-            <div class="col-4" style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; padding-bottom: 10px">
-                <a href="{% url 'index' %}" style="text-decoration: none; font-size: 13pt; color: #FFCB74">Home</a>
-                <a href="#habitaciones" style="text-decoration: none; font-size: 13pt; color: #FFCB74">Habitaciones</a>
-                <a href="#servicios" style="text-decoration: none; font-size: 13pt; color: #FFCB74">Servicios</a>
-                <a href="#galeria" style="text-decoration: none; font-size: 13pt; color: #FFCB74">Galeria</a>
-                <a href="{% url 'reserva' %}" style="text-decoration: none; font-size: 13pt; color: #FFCB74">Reservas</a>
-                <button class="btn btn-link">Registrarse</button>
-                <button class="btn btn-link">Iniciar Sesión</button>
+            <div class="col-4" style="display: flex; flex-direction: row; align-items: center; justify-content: center; gap: 10px; padding-bottom: 10px">
+                <div class="row">
+                    <div class="col" style="display: flex; flex-direction: column; align-items: center; justify-content: start">
+                        <a href="{% url 'index' %}" style="text-decoration: none; font-size: 13pt; color: #FFCB74">Home</a>
+                        <a href="#habitaciones" style="text-decoration: none; font-size: 13pt; color: #FFCB74">Habitaciones</a>
+                        <a href="#servicios" style="text-decoration: none; font-size: 13pt; color: #FFCB74">Servicios</a>
+                        <a href="#galeria" style="text-decoration: none; font-size: 13pt; color: #FFCB74">Galeria</a>
+                    </div>
+                    <div class="col" style="display: flex; flex-direction: column; align-items: center; justify-content: start">
+                        <a href="{% url 'reserva' %}" style="text-decoration: none; font-size: 13pt; color: #FFCB74">Reservas</a>
+                        <a href="{% url 'signup' %}" style="color: #FFCB74; text-decoration: none">Registrarse</a>
+                        <a href="{% url 'signin' %}" style="color: #FFCB74; text-decoration: none">Iniciar Sesión</a>
+                    </div>
+                </div>
+                
+                
             </div>
             <div class="col-4" style="display: flex; flex-direction: column; align-items: end; justify-content: center; padding-bottom: 10px">
                 <p style="color: #FFCB74;"><i class="fas fa-map-marker-alt"></i> Arturo Prat #1670, Iquique</p>
