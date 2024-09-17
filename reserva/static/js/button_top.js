@@ -1,7 +1,7 @@
-// Get the button:
+//Aparece el Botón de Volver Arriba
 let mybutton = document.getElementById("Top");
 
-// When the user scrolls down 20px from the top of the document, show the button
+//El botón aparecerá al hacer un scroll de 20px desde el top del documento.
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
@@ -12,8 +12,8 @@ function scrollFunction() {
     }
 }
 
-// When the user clicks on the button, scroll to the top of the document
+//Cuando el usuario hace clic en el botón, se desplaza hacia la parte superior del documento
 function topFunction() {
-    document.body.scrollTop = 0; // For Safari
-    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    document.body.scrollTop = 0; // Para Safari
+    document.documentElement.scrollTop = 0; // Para Chrome, Firefox, IE y Opera
 }

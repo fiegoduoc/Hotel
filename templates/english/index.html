@@ -40,23 +40,23 @@
     <div>
         <div class="topnav">
             <a href="">Home</a>
-            <a href="#habitaciones">Habitaciones</a>
-            <a href="#servicios">Servicios</a>
-            <a href="#galeria">Galería</a>
+            <a href="#habitaciones">Rooms</a>
+            <a href="#servicios">Services</a>
+            <a href="#galeria">Gallery</a>
         </div>
     </div>
     <div class="sesion">
-        <button class="btn btn-default" id="login"><a href="{% url 'signin' %}">Iniciar Sesión</a></button>
+        <button class="btn btn-default" id="login"><a href="{% url 'signin' %}">Sign In</a></button>
     </div>
 
-    <button onclick="topFunction()" id="Top" title="Go to top">Volver al Inicio</button>
+    <button onclick="topFunction()" id="Top" title="Go to top">Back to Home</button>
 
     <!-- Hero -->
     <div class="hero" id="hero">
         <div class="hero-text">
-            <h1>VIVE EL MOMENTO</h1>
-            <p>Pacific Reef Hotel hace que cada estancia sea insuperable, siempre<br>creciendo, pero manteniendo la comodidad y familiaridad</p>
-            <button type="button" class="btn bg-warning btn-lg" style="color: #2f2f2f"><a href="{% url 'reserva' %}">Reservas</a></button>
+            <h1>LIVE THE MOMENT</h1>
+            <p>Pacific Reef Hotel makes every stay second to none, always growing, but maintaining comfort and familiarity</p>
+            <button type="button" class="btn bg-warning btn-lg" style="color: #2f2f2f"><a href="{% url 'reserva' %}">Booking</a></button>
         </div>
     </div>
 
@@ -73,12 +73,11 @@
     <!-- Promociones -->
         <div class="suscripcion">
             <div class="promo">
-                <p>Membresía Pacific Reef</p>
-                <h2>¿Aún no eres Socio?<br> Inscríbete Hoy</h2>
-                <p>Sé recompensado por tus viajes con puntos, noches gratis y estatus.</p>
+                <p>Pacific Reef Membership</p>
+                <h2>Not a member yet?<br> Sign up today</h2>
+                <p>Get rewarded for your travels with points, free nights, and status.</p>
                 <div>
-                    <button type="button" class="btn bg-warning btn-lg" style="color: #2f2f2f"><a href="{% url 'signup' %}">Inscríbete</a></button>
-                    <button type="button" class="btn bg-secondary btn-lg" style="color: #fff"><a href="#">Saber Más</a></button>
+                    <button type="button" class="btn bg-warning btn-lg" style="color: #2f2f2f" onclick="document.getElementById('id02').style.display='block'">Sign Up</button>
                 </div>
             </div>
             <div class="imagen"><img src="{% static 'img/suscripcion.jpeg' %}" alt="" width="400"></div>
@@ -87,12 +86,12 @@
     <!-- Habitaciones -->
     <div class="habitaciones" id="habitaciones">
         <div class="habitacion">
-            <h2 id="room">Habitaciones</h2>
-            <p id="rooms">Descubre nuestras habitaciones y suites, cada una<br> con su propio estilo y personalidad.</p>
+            <h2 id="room">Rooms</h2>
+            <p id="rooms">Discover our rooms and suites, each with its own style and personality.</p>
             <br>
             <div class="buttons" style="margin-top: 5px">
-                <button type="button" class="btn bg-warning"  style="color: #2f2f2f"><a href="{% url 'catalogo_premium' %}">Suites Premium</a></button>
-                <button type="button" class="btn bg-warning" style="color: #2f2f2f" ><a href="{% url 'catalogo_turista' %}">Habitaciones Turista</a></button>
+                <button type="button" class="btn bg-warning"  style="color: #2f2f2f"><a href="{% url 'catalogo_premium' %}">Premium Rooms</a></button>
+                <button type="button" class="btn bg-warning" style="color: #2f2f2f" ><a href="{% url 'catalogo_turista' %}">Tourist Rooms</a></button>
             </div>
         </div>
     </div>
@@ -103,15 +102,15 @@
             <img src="{% static 'img/info_hotel.jpeg' %}" alt="" width="700">
         </div>
         <div class="informacion" style="color: #f6f6f6; background-color: #3a3b3c; padding: 50px">
-            <h2 id="info">Información del Hotel</h2>
+            <h2 id="info">Hotel Information</h2>
             <br>
             <ul>
                 <li><i class="fa fa-clock-o"></i> Check-in 16:00</li>
                 <li><i class="fa fa-clock-o"></i> Check-out 12:00</li>
-                <li><i class="fas fa-smoking-ban"></i> Hotel para no fumadores</li>
-                <li><i class="fas fa-paw"></i> Politica de Mascotas
-                    <p id="politics"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Se admiten mascotas, el número máximo de <br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;mascotas en la habitación: 2</p></li>
-                <li><i class="fas fa-car"></i> Estacionamiento según disponibilidad</li>
+                <li><i class="fas fa-smoking-ban"></i> Non-smoking hotel</li>
+                <li><i class="fas fa-paw"></i> Pet Policy
+                    <p id="politics"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Maximum number of pets <br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; in room: 2</p></li>
+                <li><i class="fas fa-car"></i> Parking at the hotel subject to availability</li>
             </ul>
         </div>
     </div>
@@ -120,28 +119,28 @@
     
     <div class="servicios" style="display: flex; flex-direction: row; justify-content: space-around; align-items: center; padding: 20px" id="servicios">
         <div class="texto" style="padding: 30px">
-            <h2 style="text-align: center;">Servicios</h2>
-            <p style="font-size: 12pt; text-align: center; line-height: 0">Descubre los servicios que ofrecemos en nuestro hotel</p>
+            <h2 style="text-align: center;">Services</h2>
+            <p style="font-size: 12pt; text-align: center; line-height: 0">Discover the services we offer at our hotel</p>
             <br>
             <br>
             <div class="service_list" style="display: flex; flex-direction: row; justify-content: center; align-items: start; line-height: 3.0">
                 <div>
                     <ul>
-                        <li><i class="fas fa-swimmer"></i> Piscina al aire libre.</li>
-                        <li><i class="fas fa-smoking-ban"></i> Habitaciones sin humo.</li>
-                        <li><i class="fas fa-utensils"></i> Restaurante.</li>
-                        <li><i class="fas fa-umbrella-beach"></i> Situado en la playa.</li>
-                        <li><i class="fas fa-wifi"></i> Wi-Fi Gratis.</li>
-                        <li><i class="fas fa-wheelchair"></i> Adaptado personas de movilidad reducida.</li>
+                        <li><i class="fas fa-swimmer"></i> Outdoor swimming pool.</li>
+                        <li><i class="fas fa-smoking-ban"></i> Smoke-free rooms.</li>
+                        <li><i class="fas fa-utensils"></i> Restaurant.</li>
+                        <li><i class="fas fa-umbrella-beach"></i> Beach access.</li>
+                        <li><i class="fas fa-wifi"></i> Free Wi-Fi.</li>
+                        <li><i class="fas fa-wheelchair"></i> Adapted for people with reduced mobility.</li>
                     </ul>
                 </div>
                 <div>
                     <ul>
-                        <li><i class="fas fa-coffee"></i> Desayuno fabuloso.</li>
+                        <li><i class="fas fa-coffee"></i> Fabulous breakfast.</li>
                         <li><i class="fas fa-glass-martini-alt"></i> Bar.</li>
-                        <li><i class="fas fa-dumbbell"></i> Gimnasio.</li>
-                        <li><i class="fas fa-spa"></i>SPA y centro de bienestar.</li>
-                        <li><i class="fas fa-concierge-bell"></i> Recepción 24 horas.</li>
+                        <li><i class="fas fa-dumbbell"></i> Gym.</li>
+                        <li><i class="fas fa-spa"></i>SPA and wellness center.</li>
+                        <li><i class="fas fa-concierge-bell"></i> 24 hour reception.</li>
                     </ul>
                 </div>
             </div>
@@ -240,14 +239,14 @@
                 <div class="row">
                     <div class="col" style="display: flex; flex-direction: column; align-items: center; justify-content: start">
                         <a href="{% url 'index' %}" style="text-decoration: none; font-size: 13pt; color: #FFCB74">Home</a>
-                        <a href="#habitaciones" style="text-decoration: none; font-size: 13pt; color: #FFCB74">Habitaciones</a>
-                        <a href="#servicios" style="text-decoration: none; font-size: 13pt; color: #FFCB74">Servicios</a>
-                        <a href="#galeria" style="text-decoration: none; font-size: 13pt; color: #FFCB74">Galeria</a>
+                        <a href="#habitaciones" style="text-decoration: none; font-size: 13pt; color: #FFCB74">Rooms</a>
+                        <a href="#servicios" style="text-decoration: none; font-size: 13pt; color: #FFCB74">Services</a>
+                        <a href="#galeria" style="text-decoration: none; font-size: 13pt; color: #FFCB74">Gallery</a>
                     </div>
                     <div class="col" style="display: flex; flex-direction: column; align-items: center; justify-content: start">
-                        <a href="{% url 'reserva' %}" style="text-decoration: none; font-size: 13pt; color: #FFCB74">Reservas</a>
-                        <a href="{% url 'signup' %}" style="color: #FFCB74; text-decoration: none">Registrarse</a>
-                        <a href="{% url 'signin' %}" style="color: #FFCB74; text-decoration: none">Iniciar Sesión</a>
+                        <a href="{% url 'reserva' %}" style="text-decoration: none; font-size: 13pt; color: #FFCB74">Booking</a>
+                        <a href="{% url 'signup' %}" style="color: #FFCB74; text-decoration: none">Sign Up</a>
+                        <a href="{% url 'signin' %}" style="color: #FFCB74; text-decoration: none">Sign In</a>
                     </div>
                 </div>
                 
@@ -262,7 +261,7 @@
 
         <div class="row" style="display: flex; flex-direction: column; justify-content: end; align-items: center; padding-top: 20px; border-top: 2px solid #FFCB74">
             <div class="col">
-                <p class="col" style="text-align: center; color: #FFCB74; font-size: 12px">© 2021 Hotel Pacific Reef. Todos los derechos reservados.</p>
+                <p class="col" style="text-align: center; color: #FFCB74; font-size: 12px">© 2021 Hotel Pacific Reef. All rights reserved.</p>
             </div>
         </div>
     </div>

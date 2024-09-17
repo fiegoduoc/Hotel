@@ -47,7 +47,7 @@
                 
                 <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; width: 100%; gap: 10px">
                     <button class="btn btn-warning d-grid gap-2 col-6 mx-auto" type="submit" style="color: white">Iniciar Sesión</button>
-                    <button class="btn btn-secondary d-grid gap-2 col-6 mx-auto" type="submit">Volver</button>
+                    <button class="btn btn-secondary d-grid gap-2 col-6 mx-auto" type="submit"><a href="{% url 'index' %}">Volver</a></button>
                 </div>
                 <div>
                     <span style="color: white">¿No tienes una cuenta? <a href="{% url 'signup' %}" style="color: #FFCB74">Regístrate</a></span>

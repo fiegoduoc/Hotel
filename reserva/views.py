@@ -29,5 +29,14 @@ def signin(request):
 def disponibilidad(request):
     return render(request, 'reservas/disponibilidad.html')
 
+
 def pago(request):
     return render(request, 'reservas/pago.html')
+
+
+def translate(request):
+    return render(request, 'english/index.html')
+
+
+def comprobante(request):
+    return render(request, 'reservas/comprobante.html')

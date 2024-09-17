@@ -1,4 +1,5 @@
 {% load static %}
+{% load qr_code %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -26,7 +27,7 @@
 
     <!-- CSS -->
     <link rel="icon" type="image/x-icon" href="{% static 'img/logoDorado.svg' %}">
-    <link rel="stylesheet" href="{% static 'css/reserva.css' %}">
+    <link rel="stylesheet" href="{% static 'css/comprobante.css' %}">
     <title>Hotel Pacific Reef</title>
 </head>
 <body>
@@ -49,42 +50,39 @@
 </div>
 
 
-<!-- Reserva -->
-<div style="padding: 30px">
-    <div class="row">
-        <div class="col">
-            <h2 class="titulo">Habitaciones Disponibles</h2>
+<!-- Comprobante de Reserva -->
+
+    <div class="fondo" style="display: flex; flex-direction: row; justify-content: center; align-items: center; gap: 30px">
+        <div class="titulo" style="margin-right: 40px; color: white">
+            <h3 style="font-size: 45pt"><strong>Felicidades su Reserva <br>ha sido Confirmada</strong></h3>
+            <p>Si desea cancelar su reserva, por favor comuníquese con <br> nosotros a través de nuestro correo electrónico o teléfono.</p>
+            <br>
+            <h2><strong>Gracias por elegirnos.</strong></h2>
+        </div>
+        <div class="comprobante">
+            <div class="comprobante1">
+                <div class="logos">
+                    <div><img src="{% static 'img/logoDorado.svg' %}" alt="" width="150"></div>
+                    <p style="color: #FFCB74; font-size: 7pt;">Presente este código QR al momento del Check-In.
+                        Este código es único y no debe ser compartido con nadie.
+                        Si tiene alguna duda, por favor comuníquese con nosotros.
+                    </p>
+                </div>
+                <div class="separador" ><span></span></div>
+                <div class="QR_container">
+                    <div class="qr">
+                        {% qr_from_text "La Reserva está Confirmada!" size="S" %}
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-    <div>
-        <table class="table">
-            <thead>
-            <tr>
-                <th scope="col">Tipo de Habitación</th>
-                <th scope="col">Descripción</th>
-                <th scope="col">Disponibilidad</th>
-                <th scope="col">Precio por noche</th>
-                <th scope="col">Reservar</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr>
-                <th scope="row"></th>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td><button class="btn btn-warning"><a href="{% url 'pago' %}" style="color: white; text-decoration: none">Reservar</a></button></td>
-            </tr>
-            </tbody>
-        </table>
-    </div>
-    <br>
 
-</div>
+<!--// Comprobante de reserva -->
 
 
 <!-- Footer -->
-<div class="footer container-fluid" style="margin-top: 20px; background-color: #3a3b3c; padding-top: 10px; padding-right: 90px; padding-left: 90px">
+<div class="footer container-fluid" style=" background-color: #3a3b3c; padding-top: 10px; padding-right: 90px; padding-left: 90px">
     <div class="row">
         <div class="col">
             <div class="redes-sociales" style="display: flex; flex-direction: row; justify-content: end; align-items: center; gap: 20px; padding-bottom: 10px; border-bottom: 2px solid #FFCB74">
@@ -104,8 +102,8 @@
             <a href="{% url 'catalogo_premium' %}" style="text-decoration: none; font-size: 13pt; color: #FFCB74">Habitaciones Premium</a>
             <a href="{% url 'catalogo_turista' %}" style="text-decoration: none; font-size: 13pt; color: #FFCB74">Habitaciones Turista</a>
             <a href="{% url 'reserva' %}" style="text-decoration: none; font-size: 13pt; color: #FFCB74">Reservas</a>
-            <button class="btn btn-link" ><a href="{% url 'signup' %}" style="color: #FFCB74">Registrarse</a></button>
-            <button class="btn btn-link" ><a href="{% url 'signin' %}" style="color: #FFCB74">Iniciar Sesión</a></button>
+            <a href="{% url 'signup' %}" style="color: #FFCB74; text-decoration: none;">Registrarse</a>
+            <a href="{% url 'signin' %}" style="color: #FFCB74; text-decoration: none;">Iniciar Sesión</a>
         </div>
         <div class="col-4" style="display: flex; flex-direction: column; align-items: end; justify-content: center; padding-bottom: 10px">
             <p style="color: #FFCB74;"><i class="fas fa-map-marker-alt"></i> Arturo Prat #1670, Iquique</p>
