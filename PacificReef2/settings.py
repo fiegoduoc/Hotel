@@ -133,7 +133,6 @@ STATIC_URL = '/static/'
 STATIC_DIRS = os.path.join(BASE_DIR, "reserva/static")
 
 MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(os.path.dirname(BASE_DIR), "media_root")
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
