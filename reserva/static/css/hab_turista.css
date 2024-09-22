@@ -60,35 +60,35 @@
 }
 
 /* Slideshow */
-#slide1{
+#slide11{
     background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../img/hab_turista1.jpeg");
     height: 700px;
     width: 100%;
     background-size: cover;
 }
 
-#slide2{
+#slide21{
     background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../img/hab_turista2.jpg");
     height: 700px;
     width: 100%;
     background-size: cover;
 }
 
-#slide3{
+#slide31{
     background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../img/hab_turista3.jpeg");
     height: 700px;
     width: 100%;
     background-size: cover;
 }
 
-#slide4{
+#slide41{
     background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../img/hab_turista5.jpeg");
     height: 700px;
     width: 100%;
     background-size: cover;
 }
 
-#slide5{
+#slide51{
     background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../img/hab_turista6.jpeg");
     height: 700px;
     width: 100%;

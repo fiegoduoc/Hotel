@@ -1,0 +1,45 @@
+{% extends 'Base.html' %}
+{% load crispy_forms_filters %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+    <div id="picture">
+    
+        <div>
+            <div class="letras">
+                <h2 style="font-family: 'Italiana',serif; opacity: 60%; color: #FFCB74; font-size: 90pt;">Bienvenido</h2>
+            </div>
+            <div class="letras1">
+                <h3 style="font-family: 'Italiana',serif; opacity: 60%; color: #FFCB74; font-size: 80pt;">Welcome</h3>
+            </div>
+            <div class="letras2">
+                <h3 style="font-family: 'Italiana',serif; opacity: 60%; color: #FFCB74; font-size: 60pt; ">Bienvenue</h3>
+            </div >
+            <div class="letras3">
+                <h3 style="font-family: 'Italiana',serif; opacity: 60%; color: #FFCB74;font-size: 60pt; ">Willkommen</h3>
+            </div>
+            <div class="letras4">
+                <h3 style="font-family: 'Italiana',serif; opacity: 60%; color: #FFCB74;font-size: 55pt;">Benvenuto</h3>
+            </div>
+        </div>
+    </div>
+    
+    <div class="forms" style="overflow: auto; position: absolute; z-index: 8; top: 15%; left: 3%; width: 35vw; height: 80vh; padding: 20px">
+        <div class="formulario">
+            <div style="margin: 20px 0 0 0">
+                <h2 style="text-align: center">Registro de <br>Usuario</h2>
+            </div>
+            <br>
+            <form action="" method="POST">
+                {% csrf_token %}
+                {{ form|crispy }}
+                <p>**La contraseña debe tener al menos 8 caracteres</p>
+                <input type="submit" value="Registrarse" class="form-control"/>
+                <p style="text-align: center; margin-bottom: 20px">¿Ya tienes cuenta? <a href="" style="color: #FFCB74">Inicia Sesión</a></p>
+            </form>
+        </div>
+    </div>
+    
+
+{% endblock %}

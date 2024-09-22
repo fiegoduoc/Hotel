@@ -44,9 +44,14 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'reserva',
     'rest_framework',
-    'qr_code'
+    'qr_code',
+    'crispy_forms',
+    'crispy_bootstrap4',
+    'formset',
 
 ]
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -133,6 +138,10 @@ STATIC_URL = '/static/'
 STATIC_DIRS = os.path.join(BASE_DIR, "reserva/static")
 
 MEDIA_URL = '/media/'
+
+STATICFILES_DIRS = [
+    ('node_modules', BASE_DIR / 'node_modules'),
+]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field

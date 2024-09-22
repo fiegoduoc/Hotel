@@ -1,47 +1,7 @@
+{% extends 'Base.html' %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="https://kit.fontawesome.com/92c054d238.js" crossorigin="anonymous"></script>
-
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Italiana&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Antic+Didone&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-
-    <!-- CSS -->
-    <link rel="icon" type="image/x-icon" href="{% static 'img/logoDorado.svg' %}">
-    <link rel="stylesheet" href="{% static 'css/hab_premium.css' %}">
-    <title>Hotel Pacific Reef</title>
-</head>
-<body>
-    <div>
-        <div class="topnav">
-            <div>
-                <img src="{% static 'img/logoDorado.svg' %}" alt="Logo" class="logo" width="60">
-            </div>
-            <div style="display: flex; flex-direction: row; justify-content: center">
-                <a href="{% url 'index' %}">Home</a>
-                <a href="{% url 'catalogo_turista' %}">Habitaciones Turista</a>
-            </div>
-            <button class="btn btn-link" ><a href="{% url 'signin' %}" style="color: #FFCB74">Iniciar Sesión</a></button>
-        </div>
-
+{% block content %}
         <!-- Contenido -->
         
         <!-- Slideshow-->
@@ -182,49 +142,5 @@
 
             <div class="clearfix"></div>
         </div>
-        
         <!-- //Galería de imágenes -->
-        
-        
-        <!-- Footer -->
-        <div class="footer container-fluid" style="margin-top: 20px; background-color: #3a3b3c; padding-top: 10px; padding-right: 90px; padding-left: 90px">
-            <div class="row">
-                <div class="col">
-                    <div class="redes-sociales" style="display: flex; flex-direction: row; justify-content: end; align-items: center; gap: 20px; padding-bottom: 10px; border-bottom: 2px solid #FFCB74">
-                        <img src="{% static 'img/facebook2.svg' %}" alt="Facebook" width="20">
-                        <img src="{% static 'img/instagram2.svg' %}" alt="Instagram" width="20">
-                        <img src="{% static 'img/x2.svg' %}" alt="X" width="20">
-                    </div>
-                </div>
-            </div>
-            <br>
-            <div class="row">
-                <div class="col-4" style="display: flex; flex-direction: column; align-items: start; justify-content: start; padding-bottom: 20px">
-                    <img src="{% static 'img/logoDorado.svg' %}" alt="" width="200px">
-                </div>
-                <div class="col-4" style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; padding-bottom: 10px">
-                    <a href="{% url 'index' %}" style="text-decoration: none; font-size: 13pt; color: #FFCB74">Home</a>
-                    <a href="{% url 'catalogo_turista' %}" style="text-decoration: none; font-size: 13pt; color: #FFCB74">Habitaciones Turista</a>
-                    <a href="{% url 'reserva' %}" style="text-decoration: none; font-size: 13pt; color: #FFCB74">Reservas</a>
-                    <button class="btn btn-link" onclick="document.getElementById('id02').style.display='block'">Registrarse</button>
-                    <button class="btn btn-link" onclick="document.getElementById('id01').style.display='block'">Iniciar Sesión</button>
-                </div>
-                <div class="col-4" style="display: flex; flex-direction: column; align-items: end; justify-content: center; padding-bottom: 10px">
-                    <p style="color: #FFCB74;"><i class="fas fa-map-marker-alt"></i> Arturo Prat #1670, Iquique</p>
-                    <p style="color: #FFCB74;"><i class="fas fa-phone"></i> +562666665</p>
-                    <p style="color: #FFCB74;"><i class="fas fa-envelope"></i> administracion@hotelpacificreef.cl</p>
-                </div>
-            </div>
-
-            <div class="row" style="display: flex; flex-direction: column; justify-content: end; align-items: center; padding-top: 20px; border-top: 2px solid #FFCB74">
-                <div class="col">
-                    <p class="col" style="text-align: center; color: #FFCB74; font-size: 12px">© 2021 Hotel Pacific Reef. Todos los derechos reservados.</p>
-                </div>
-            </div>
-        </div>  
-    </div>
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-
-</body>
-</html>
+{% endblock %}
